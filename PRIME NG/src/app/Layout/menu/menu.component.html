@@ -1,0 +1,25 @@
+
+
+<div><p-menubar >
+    <ng-template pTemplate="start">
+        <img src="../../../assets/images/logo.svg" width="30px" >
+        <a href="#" class="menu-btn" (click)="app.onMenuButtonClick($event)"  >
+            <i class="fa fa-bars" style="font-size: larger" ></i>
+        </a>
+    </ng-template>
+   
+    
+
+    <ng-template pTemplate="end">
+        <div>
+            <span class="p-input-icon-left search">
+        <i class="pi pi-search"></i>
+        <input type="text" pInputText class=" p-inputtext-sm" placeholder="Search"  />
+    </span>
+    <span style="padding-left: 10px;" >  <i   class="pi pi-user"></i></span>
+     <span  style="padding-left: 10px;">  <i   class="pi pi-power-off"></i></span>
+          
+    
+        </div>
+    </ng-template>
+</p-menubar></div>

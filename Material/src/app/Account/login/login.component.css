@@ -1,0 +1,11 @@
+.center
+{
+  width: 28%;
+}
+.md-button
+{
+  justify-content: left !important;
+  width: 100%;
+  /* font-family: 'B612', sans-serif; */
+  background-color:#3C76D2 !important;
+}

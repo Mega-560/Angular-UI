@@ -1,0 +1,26 @@
+
+
+<header>
+  <app-menu></app-menu>
+</header>
+
+<section >
+<div class="layout-wrapper " id="style-1"  [ngClass]="status ? 'success' : 'danger'">
+
+  <!-- <app-nav *ngIf="show"></app-nav> -->
+  <app-nav ></app-nav>
+</div>
+
+  <article class="ss" [ngClass]="states ? 'actact' : 'actdec'">
+<div class="foot">
+    <router-outlet>
+    </router-outlet>
+  </div>
+    <footer>
+      <p>Footer</p>
+    </footer>
+   </article>
+   
+</section>
+
+

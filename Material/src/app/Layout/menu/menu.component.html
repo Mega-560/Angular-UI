@@ -1,0 +1,66 @@
+
+
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches" >
+  <mat-toolbar color="primary" class="example-toolbar "  >
+    <img src="../../../assets/images/primeng.svg" width="60px"/>
+    <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+    
+  </mat-toolbar>
+
+  <mat-sidenav-container class="example-sidenav-container"
+                         [style.marginTop.px]="mobileQuery.matches ? 84 : 0">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+                 [fixedInViewport]="mobileQuery.matches" fixedTopGap="84" style="background: #212939 !important;">
+      <mat-nav-list>
+        <span *ngFor="let item of menu">
+          <span *ngIf="item.children && item.children.length > 0">
+            <mat-accordion>
+              <mat-expansion-panel class="menu-head">
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    <!-- Cabeceras del submenu -->
+                    <div fxLayout="row" fxLayoutAlign="space-between center menu-text" style="color: white;"> 
+                      <mat-icon><div class="menu-icon">{{item.iconName}}</div></mat-icon>
+                     <div class="menu-text">{{item.displayName}}</div> 
+                    </div>
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+                <span *ngFor="let child of item.children">
+                  <mat-list-item routerLink="{{child.route}}">
+                    <!-- Entradas de cada submenú  -->
+                    <div fxLayout="row" fxLayoutAlign="space-between center menu-text"  style="color: white;"> 
+                      <!-- <mat-icon>{{child.iconName}}</mat-icon> -->
+                      {{child.displayName}}
+                    </div>
+                  </mat-list-item>
+                </span>
+              </mat-expansion-panel>
+            </mat-accordion>
+          </span>
+          <span *ngIf="!item.children || item.children.length === 0">
+            <mat-list-item routerLink="{{item.route}}">
+              <!-- Entradas principales -->
+              <div fxLayout="row" fxLayoutAlign="space-between center menu-text" style="color: white;">
+                <!-- <mat-icon>{{item.iconName}}</mat-icon> -->
+                {{item.displayName}}
+              </div>
+            </mat-list-item>
+          </span>
+        </span>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content >
+<div  style="padding: 15px  15px  0px  15px !important;min-height: 532px ;">
+        <router-outlet>
+        </router-outlet>
+      </div>
+      <app-footer ></app-footer>
+    </mat-sidenav-content>
+ 
+  </mat-sidenav-container>
+
+</div>
+
+
+
+

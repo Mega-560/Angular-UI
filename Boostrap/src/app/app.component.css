@@ -1,0 +1,157 @@
+.off
+{
+    background-image: url("./../assets/images/up.png");
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+   
+}
+.live
+{
+    background-image: url("./../assets/images/bg.png");
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    padding:10px
+ 
+}
+.top
+{
+    margin: auto;
+    display: block;
+    width: 80%;
+    background-color: white;
+    border-radius: 15px;
+    padding:40px;
+
+}
+.let
+{
+    text-transform: uppercase; 
+}
+.same
+{
+    background: white;
+    border-radius: 13px;
+    border:  3px solid #80808061;
+    margin: auto;
+    display: block;
+    width: 80%;
+    padding: 20px;
+ display: flex;
+    margin-top: 10px;
+
+}
+.space
+{
+    height:200px;
+}
+._1GTrm1 {
+    margin: 3px 0;
+}
+._3CuAg8 {
+    padding: 0 5px;
+    border-right: 1px solid #333;
+    font-size: 12px;
+}
+a, img {
+    text-decoration: none;
+    color: inherit;
+    border: none;
+    outline: none;
+}
+._3CuAg8 {
+    padding: 0 5px;
+    border-right: 1px solid rgb(8, 8, 8);
+    font-size: 12px;
+}
+.footer
+{
+    padding: 30px 30px;
+}
+._3CuAg8:last-child {
+    border-right: none;
+}
+.cad
+{
+    position:relative ;
+    top:64px
+}
+.cam
+{
+    width: 500px;
+}
+.fot{
+    float:right;
+   
+   }
+@media (max-width: 575.98px) { 
+
+    .upnav{
+
+position: unset !important;
+top:0px !important;
+    }
+    .cad
+    {
+        position:relative ;
+        top:10px
+    }
+    .fot{
+     float:none;
+    text-align: center;
+    }
+    .footer
+    {
+        text-align: center;
+    }
+  
+}
+@media (min-width: 576px) and (max-width: 767.98px) { 
+
+    .upnav{
+        top:0px  !important
+    }
+    .cad
+    {
+        width: 300px;
+        height:190px;
+        top:20px
+    }
+    img
+    {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+    .cam{
+        width: 300px;
+    }
+   
+    
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .upnav{
+        top:0px  !important
+    }
+  
+    .cad
+    {
+        top:0px !important;
+        height:160px !important
+    }
+    
+}
+@media (min-width: 1200px) {
+    .upnav{
+        top:0px  !important
+    }
+    .cad
+    {
+        top:0px !important;
+        height:259px !important;
+        width: 500px !important;
+    }
+
+}

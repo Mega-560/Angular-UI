@@ -1,0 +1,80 @@
+
+<div class="center">
+
+  <div class="head_divk">Registration</div>
+  <form  class="furycard  example-form formpad " >
+<mat-grid-list cols="4" rowHeight="54px">
+  <mat-grid-tile  [colspan]="2" [rowspan]="1">
+   
+        <mat-form-field appearance="fill"  class="example-full-width ">
+          <mat-label>First Name</mat-label>
+          <input matInput>
+        </mat-form-field>
+      </mat-grid-tile>
+        <mat-grid-tile  [colspan]="2" [rowspan]="1" >
+        <mat-form-field appearance="fill"   class="example-full-width xc">
+          <mat-label>Surname</mat-label>
+          <input matInput>
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile  [colspan]="4" [rowspan]="1">
+        <mat-form-field appearance="fill"   class="example-full-width" >
+          <mat-label>Email address</mat-label>
+          <input matInput placeholder="Ex. pat@example.com">
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile  [colspan]="4" [rowspan]="1">
+        <mat-form-field  appearance="fill"  class="example-full-width" >
+          <mat-label>Enter password</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile  [colspan]="4" [rowspan]="1"  class="example-full-width">
+         <div class="form-group">
+        <label id="example-radio-group-label">Gender </label>
+
+        <mat-radio-group aria-label="Select an option"   class="example-full-width">
+          <mat-radio-button value="1">Male</mat-radio-button>
+          <mat-radio-button class="example-radio-button" value="2">Female</mat-radio-button>
+        
+        </mat-radio-group>
+      <br>
+      </div>
+      </mat-grid-tile>
+      <mat-grid-tile  [colspan]="2" [rowspan]="1">
+       
+        
+        <mat-form-field appearance="fill" class="example-full-width">
+          <mat-label>Choose a date</mat-label>
+          <input matInput [matDatepicker]="picker">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    
+       
+    
+    
+    
+  </mat-grid-tile>
+ 
+       
+         
+        
+  
+ 
+ 
+  </mat-grid-list>
+  <br>
+  
+  <div class="md">
+    <button mat-raised-button color="primary" style='float: right;background-color: #3C76D2;' >Sign Up</button>
+  </div>
+
+    <p>Already have an account?
+     <a routerLink="/login">Sign in here !</a> </p>
+
+  </form>
+  </div>

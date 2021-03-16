@@ -1,0 +1,76 @@
+<div >
+  
+ 
+<div class="center">
+
+  <div class="head_divk">Welcome</div>
+      <form  class="furycard formpad " >
+        <mat-grid-list cols="4" rowHeight="60px">
+          
+      
+      
+          
+            <mat-grid-tile  [colspan]="4" [rowspan]="1">
+         
+              <mat-form-field appearance="fill" class="example-full-width">
+                <mat-label>Email *</mat-label>
+                <input matInput placeholder="Email" type="email"  value="">
+              </mat-form-field>
+          
+          </mat-grid-tile>
+          
+          <mat-grid-tile  [colspan]="4" [rowspan]="1">
+            <mat-form-field appearance="fill" class="example-full-width" >
+              <mat-label>Enter password</mat-label>
+              <input matInput [type]="hide ? 'password' : 'text'">
+              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+            </mat-form-field>
+          </mat-grid-tile>
+
+        
+         <div  class="width:100%">
+         <mat-grid-tile  [colspan]="2" [rowspan]="1">
+      
+          <mat-checkbox  >
+            <h5 style="padding-top: 13px">Remember me</h5>
+        
+            
+          </mat-checkbox>
+   
+      
+      </mat-grid-tile>
+      <mat-grid-tile  [colspan]="2" [rowspan]="1">
+      
+      
+          <h5 style="padding-top: 13px ;"><a routerLink="/login">Forgot Password ?</a></h5>
+      
+          
+      
+    
+    </mat-grid-tile>
+    </div>
+      
+          
+        <mat-grid-tile  [colspan]="4"[rowspan]="1"> 
+       
+         
+          
+            <button mat-raised-button color="primary" class="md-button" (click)="log()">Login</button>
+          
+          </mat-grid-tile>
+
+          <mat-grid-tile  [colspan]="4" [rowspan]="1">
+        
+            <p>Not a member ? <a routerLink="/signup">SignUp Now</a></p>
+           
+           </mat-grid-tile>
+
+      
+        </mat-grid-list>
+        
+      </form>
+  
+</div>
+</div>

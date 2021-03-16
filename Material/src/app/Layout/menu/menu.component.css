@@ -1,0 +1,85 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.example-is-mobile .example-toolbar {
+  position: fixed;
+  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+  z-index: 2;
+}
+
+h1.example-app-name {
+  margin-left: 8px;
+}
+
+.example-sidenav-container {
+  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+     causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+  flex: 1;
+}
+
+.example-is-mobile .example-sidenav-container {
+  /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+     `<body>` to be our scrolling element for mobile layouts. */
+  flex: 1 0 auto;
+}
+
+
+.menu-head
+{
+  background-color: #283144 !important;
+ 
+}
+
+
+.mat-accordion .mat-expansion-panel:last-of-type {
+  border-bottom-right-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+}
+.mat-accordion .mat-expansion-panel:first-of-type {
+ border-top-right-radius: 0px !important; 
+  border-top-left-radius: 0px !important; 
+}
+.mat-expansion-panel-header.mat-expanded:hover {
+  background: #ff4081;
+
+}
+.mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:hover:not([aria-disabled=true]) {
+  background: #ff4081;
+}
+.mat-nav-list .mat-list-item:hover
+{
+  background: #ff4081;
+}
+.mat-list-base .mat-list-item
+{
+  height: 40px !important;
+}
+.mat-expansion-panel-header.mat-expanded {
+   height: 42px;
+}
+.mat-list-base {
+  padding-top: 0px;
+}
+.menu-text
+{
+  position: relative;
+  left: 32px;
+  top: -24px;
+}
+.menu-icon
+{
+  margin-top: 27px;
+ 
+}
+.material-icons {
+
+  font-size: 20px !important;
+
+  }
